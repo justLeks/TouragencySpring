@@ -17,7 +17,7 @@
         <td>Enabled</td>
     </tr>
     <c:forEach items="${users}" var="user">
-        <form method="post" action="<c:url value="/userblocked"/>">
+        <form method="post" action="<c:url value="/dashboard/userblocked"/>">
             <input type="hidden" name="email" value="${user.email}"/>
             <tr>
                 <td>${user.username}</td>

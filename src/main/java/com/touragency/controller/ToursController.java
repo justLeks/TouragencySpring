@@ -15,7 +15,7 @@ public class ToursController {
     @Autowired
     private ToursDao toursDao;
 
-    @RequestMapping("/createtour")
+    @RequestMapping("/dashboard/createtour")
     public String addTour(@Valid Tour tour, BindingResult result) {
         if (result.hasErrors()) {
             return "addTour";

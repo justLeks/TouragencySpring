@@ -45,14 +45,14 @@ public class UsersController {
         return "loggedout";
     }
 
-    @RequestMapping("/userslist")
+    @RequestMapping("/dashboard/userslist")
     public String showUsersList(Model model) {
         List<User> users = usersDao.findAll();
         model.addAttribute("users", users);
         return "usersList";
     }
 
-    @RequestMapping("/userblocked")
+    @RequestMapping("/dashboard/userblocked")
     public String userBlocked(Model model, @RequestParam(value = "email") String email) {
         User user = usersDao.findByEmail(email);
         model.addAttribute("blockedUser", user);

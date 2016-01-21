@@ -48,7 +48,7 @@ public class HomeController {
         return "vacationTours";
     }
 
-    @RequestMapping("/addtour")
+    @RequestMapping("/dashboard/addtour")
     public String showAddTour(Model model) {
         model.addAttribute("tour", new Tour());
         return "addTour";

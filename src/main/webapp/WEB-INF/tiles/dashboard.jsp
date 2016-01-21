@@ -8,6 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<a class="font" href="<c:url value="/addtour"/>">Add Tour</a>
+<a class="font" href="<c:url value="/dashboard/addtour"/>">Add Tour</a>
 <br/>
-<a class="font" href="<c:url value="/userslist"/>">List of current users</a>
+<a class="font" href="<c:url value="/dashboard/userslist"/>">List of current users</a>

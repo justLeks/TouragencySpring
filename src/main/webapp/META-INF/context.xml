@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <Resource name="jdbc/spring" auth="Container" type="javax.sql.DataSource"
+              maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+              username="root" password="Ololo47149fe42" driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/springTouragency"
+              URIEncoding="UTF-8"/>
+</Context>

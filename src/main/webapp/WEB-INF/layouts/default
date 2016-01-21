@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="touragency.base" template="/WEB-INF/templates/default.jsp">
+        <put-attribute name="title" value="Title"/>
+        <put-attribute name="header" value="/WEB-INF/tiles/header.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/body.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"/>
+    </definition>
+    <definition name="home" extends="touragency.base">
+        <put-attribute name="title" value="Spring Touragency"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/homepage.jsp"/>
+    </definition>
+    <definition name="allAvailableTours" extends="touragency.base">
+        <put-attribute name="title" value="All Available Tours"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/allAvailableTours.jsp"/>
+    </definition>
+    <definition name="addTour" extends="touragency.base">
+        <put-attribute name="title" value="Add Tour"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/addTour.jsp"/>
+    </definition>
+    <definition name="tourAdded" extends="touragency.base">
+        <put-attribute name="title" value="Tour Added"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/tourAdded.jsp"/>
+    </definition>
+    <definition name="signUp" extends="touragency.base">
+        <put-attribute name="title" value="Sign Up"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/signUp.jsp"/>
+    </definition>
+    <definition name="userCreated" extends="touragency.base">
+        <put-attribute name="title" value="User Created"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/userCreated.jsp"/>
+    </definition>
+    <definition name="login" extends="touragency.base">
+        <put-attribute name="title" value="Sign In"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/login.jsp"/>
+    </definition>
+    <definition name="loggedout" extends="touragency.base">
+        <put-attribute name="title" value="Logged Out"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/loggedout.jsp"/>
+    </definition>
+    <definition name="usersList" extends="touragency.base">
+        <put-attribute name="title" value="List of Users"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/usersList.jsp"/>
+    </definition>
+    <definition name="userBlocked" extends="touragency.base">
+        <put-attribute name="title" value="List of Users"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/userBlocked.jsp"/>
+    </definition>
+    <definition name="shoppingTours" extends="touragency.base">
+        <put-attribute name="title" value="List of Shopping Tours"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/shoppingTours.jsp"/>
+    </definition>
+    <definition name="vacationTours" extends="touragency.base">
+        <put-attribute name="title" value="List of Vacation Tours"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/vacationTours.jsp"/>
+    </definition>
+    <definition name="excursionTours" extends="touragency.base">
+        <put-attribute name="title" value="List of Excursion Tours"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/excursionTours.jsp"/>
+    </definition>
+</tiles-definitions>

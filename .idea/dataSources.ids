@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - springTouragency@localhost" uuid="c7f7acba-73aa-4bc4-b25d-0908a1b1ebc4">
+    <database-info product="MySQL" version="5.5.46-0ubuntu0.14.04.2" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="springTouragency"/>
+      <table id="2" parent="1" name="orders"/>
+      <table id="3" parent="1" name="tours"/>
+      <table id="4" parent="1" name="users"/>
+      <column id="5" parent="2" name="idOrder">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="6" parent="2" name="idTour">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="7" parent="2" name="idUser">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="8" parent="2" name="fk_table1_tour1_idx">
+        <columns>idTour</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="9" parent="2" name="PRIMARY">
+        <columns>idOrder</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="10" parent="2" name="fk_table1_tour1">
+        <columns>idTour</columns>
+        <ref-key>~.tours.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="11" parent="3" name="idTour">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="12" parent="3" name="hotelClass">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="13" parent="3" name="price">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="14" parent="3" name="destCountry">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="15" parent="3" name="startDay">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="16" parent="3" name="endDay">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="17" parent="3" name="food">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="18" parent="3" name="hot">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="19" parent="3" name="tourType">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <key id="20" parent="3" name="PRIMARY">
+        <columns>idTour</columns>
+        <primary>1</primary>
+      </key>
+      <column id="21" parent="4" name="username">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="22" parent="4" name="email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="23" parent="4" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="24" parent="4" name="authority">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+        <default-expression>&apos;ROLE_USER&apos;</default-expression>
+      </column>
+      <column id="25" parent="4" name="enabled">
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="26" parent="4" name="PRIMARY">
+        <columns>username</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

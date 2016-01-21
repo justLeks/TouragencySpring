@@ -10,19 +10,17 @@
 
 <table class="flat-table flat-table-2">
     <tr>
-        <td>ID</td>
-        <td>Hotel Class</td>
+        <td>Hotel</td>
         <td>Price</td>
-        <td>Destination Country</td>
+        <td>Country</td>
         <td>Start Day</td>
         <td>End Day</td>
         <td>Food</td>
         <td>Hot</td>
-        <td>Tour Type</td>
+        <td>Type</td>
     </tr>
     <c:forEach items="${shoppingTours}" var="tour">
         <tr>
-            <td>${tour.idTour}</td>
             <td>${tour.hotelClass}</td>
             <td>${tour.price}</td>
             <td>${tour.destCountry}</td>

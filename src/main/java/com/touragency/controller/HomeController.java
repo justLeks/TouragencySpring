@@ -54,4 +54,8 @@ public class HomeController {
         return "addTour";
     }
 
+    @RequestMapping("/dashboard")
+    public String showDashboard() {
+        return "dashboard";
+    }
 }

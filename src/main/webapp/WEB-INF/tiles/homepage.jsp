@@ -22,14 +22,12 @@
 </a>
 
 <a href="<c:url value="/excursiontours"/>">
-    <img  src="${pageContext.request.contextPath}/static/img/excursions.jpg">
+    <img src="${pageContext.request.contextPath}/static/img/excursions.jpg">
 </a>
 
 <br/>
 <sec:authorize access="hasRole('ROLE_ADMIN')">
-    <a href="<c:url value="/addtour"/>">Add Tour</a>
-</sec:authorize>
-<br/>
-<sec:authorize access="hasRole('ROLE_ADMIN')">
-    <a href="<c:url value="/userslist"/>">List of current users</a>
+    <a href="<c:url value="/dashboard"/>">
+        <img src="${pageContext.request.contextPath}/static/img/dashboard.jpg">
+    </a>
 </sec:authorize>

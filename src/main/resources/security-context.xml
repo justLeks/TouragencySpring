@@ -19,6 +19,8 @@
         <security:intercept-url pattern="/userslist" access="hasRole('ROLE_ADMIN')"/>
         <security:intercept-url pattern="/blockuser" access="hasRole('ROLE_ADMIN')"/>
         <security:intercept-url pattern="/userblocked" access="hasRole('ROLE_ADMIN')"/>
+        <security:intercept-url pattern="/dashboard" access="hasRole('ROLE_ADMIN')"/>
+        <security:intercept-url pattern="/favicon.ico" access="ROLE_ANONYMOUS"/>
         <security:intercept-url pattern="/allavaliabletours" access="isAuthenticated()"/>
         <security:intercept-url pattern="/shoppingtours" access="isAuthenticated()"/>
         <security:intercept-url pattern="/excursiontours" access="isAuthenticated()"/>

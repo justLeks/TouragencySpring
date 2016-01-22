@@ -9,8 +9,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
-<a class="font" href="<c:url value="/dashboard/addtour"/>">Add Tour</a>
+<a href="<c:url value="/dashboard/addtour"/>">
+    <img src="${pageContext.request.contextPath}/static/img/addTour.jpg">
+</a>
 <br/>
-<a class="font" href="<c:url value="/dashboard/userslist"/>">List of current users</a>
-<br/>
-<a class="font" href="<c:url value="/dashboard/currentorders"/>">List of current orders</a>
+
+<a href="<c:url value="/dashboard/userslist"/>">
+    <img src="${pageContext.request.contextPath}/static/img/currentUsers.jpg">
+</a>
+
+<a href="<c:url value="/dashboard/currentorders"/>">
+    <img src="${pageContext.request.contextPath}/static/img/currentOrders.jpg">
+</a>

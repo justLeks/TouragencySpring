@@ -20,10 +20,14 @@ public class User {
     @ValidEmail(message = "Email is not correct")
     private String email;
 
+    @Transient
     @NotBlank(message = "Password can not be blank.")
     @Pattern(regexp = "^\\S+$", message = "Password can not contain spaces.")
     @Size(min = 6, max = 15, message = "Password must be between 8 and 15 characters long.")
     private String password;
+
+    @Column(name = "password")
+    private String encodedPassword;
 
     private String authority;
     private boolean enabled;
@@ -53,6 +57,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getEncodedPassword() {
+        return encodedPassword;
+    }
+
+    public void setEncodedPassword(String encodedPassword) {
+        this.encodedPassword = encodedPassword;
     }
 
     public String getAuthority() {

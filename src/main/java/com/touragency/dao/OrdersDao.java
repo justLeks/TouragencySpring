@@ -32,4 +32,14 @@ public class OrdersDao {
         criteria.add(Restrictions.eq("email", email));
         return criteria.list();
     }
+
+    public void confirm(Order order) {
+        order.setConfirmed(true);
+        currentSession().saveOrUpdate(order);
+    }
+
+    public void pay(Order order) {
+        order.setPaid(true);
+        currentSession().saveOrUpdate(order);
+    }
 }

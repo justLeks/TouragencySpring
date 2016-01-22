@@ -71,7 +71,11 @@
         <put-attribute name="body" value="/WEB-INF/tiles/tourOrdered.jsp"/>
     </definition>
     <definition name="personalRoom" extends="touragency.base">
-        <put-attribute name="title" value="Tour Ordered"/>
+        <put-attribute name="title" value="Personal Room"/>
         <put-attribute name="body" value="/WEB-INF/tiles/personalRoom.jsp"/>
+    </definition>
+    <definition name="currentOrders" extends="touragency.base">
+        <put-attribute name="title" value="Current Orders"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/currentOrders.jsp"/>
     </definition>
 </tiles-definitions>

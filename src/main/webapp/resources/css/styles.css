@@ -40,53 +40,63 @@ a.login {
 .flat-table {
     text-align: center;
     margin-bottom: 20px;
-    border-collapse:collapse;
+    border-collapse: collapse;
     font-family: 'Lato', Calibri, Arial, sans-serif;
     border: none;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
+
 .flat-table th, .flat-table td {
-    box-shadow: inset 0 -1px rgba(0,0,0,0.25),
-    inset 0 1px rgba(0,0,0,0.25);
+    box-shadow: inset 0 -1px rgba(0, 0, 0, 0.25),
+    inset 0 1px rgba(0, 0, 0, 0.25);
 }
+
 .flat-table th {
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     padding: 1em;
-    color: rgba(0,0,0,0.45);
-    text-shadow: 0 0 1px rgba(0,0,0,0.1);
+    color: rgba(0, 0, 0, 0.45);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
     font-size: 1.5em;
 }
+
 .flat-table td {
     color: #f7f7f7;
     padding: 0.7em 1em 0.7em 1.15em;
-    text-shadow: 0 0 1px rgba(255,255,255,0.1);
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
     font-size: 1em;
 }
+
 .flat-table tr {
     -webkit-transition: background 0.3s, box-shadow 0.3s;
     -moz-transition: background 0.3s, box-shadow 0.3s;
     transition: background 0.3s, box-shadow 0.3s;
 }
+
 .flat-table-1 {
     background: #336ca6;
 }
+
 .flat-table-1 tr:hover {
-    background: rgba(0,0,0,0.19);
+    background: rgba(0, 0, 0, 0.19);
 }
+
 .flat-table-2 tr:hover {
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
+
 .flat-table-2 {
     background: #f06060;
 }
+
 .flat-table-3 {
-    background: с;
+    background: lightslategray;
 }
+
 .flat-table-3 tr:hover {
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 a.font {
@@ -107,4 +117,31 @@ a:hover {
 
 a:active {
     text-decoration: underline;
+}
+
+.myButtonBlue {
+    border-radius: 20px;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: darkblue;
+    font-size: 18px;
+    padding: 5px 10px 5px 5px;
+    text-decoration: none;
+}
+
+.myButtonRed {
+    border-radius: 20px;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: darkred;
+    font-size: 18px;
+    padding: 5px 10px 5px 5px;
+    text-decoration: none;
+}
+
+.myButtonGrey {
+    border-radius: 20px;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: dimgray;
+    font-size: 18px;
+    padding: 5px 10px 5px 5px;
+    text-decoration: none;
 }

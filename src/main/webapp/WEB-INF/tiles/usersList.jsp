@@ -15,7 +15,7 @@
         <td>Password</td>
         <td>Authority</td>
         <td>Enabled</td>
-        <td></td>
+        <td>&ensp;&ensp;</td>
     </tr>
     <c:forEach items="${users}" var="user">
         <form method="post" action="<c:url value="/dashboard/userblocked"/>">
@@ -26,7 +26,7 @@
                 <td>${user.password}</td>
                 <td>${user.authority}</td>
                 <td>${user.enabled}</td>
-                <td><button type="submit">Block</button></td>
+                <td><button class="myButtonBlue" type="submit">Block</button></td>
             </tr>
         </form>
     </c:forEach>

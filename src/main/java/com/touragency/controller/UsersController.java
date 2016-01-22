@@ -7,10 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @Controller
 public class UsersController {
@@ -45,18 +43,4 @@ public class UsersController {
         return "loggedout";
     }
 
-    @RequestMapping("/dashboard/userslist")
-    public String showUsersList(Model model) {
-        List<User> users = usersDao.findAll();
-        model.addAttribute("users", users);
-        return "usersList";
-    }
-
-    @RequestMapping("/dashboard/userblocked")
-    public String userBlocked(Model model, @RequestParam(value = "email") String email) {
-        User user = usersDao.findByEmail(email);
-        model.addAttribute("blockedUser", user);
-        usersDao.block(user);
-        return "userBlocked";
-    }
 }

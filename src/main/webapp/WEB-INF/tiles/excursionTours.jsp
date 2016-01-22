@@ -17,18 +17,25 @@
         <td>End Day</td>
         <td>Food</td>
         <td>Hot</td>
-        <td>Type</td>
+        <td></td>
     </tr>
     <c:forEach items="${excursionTours}" var="tour">
-        <tr>
-            <td>${tour.hotelClass}</td>
-            <td>${tour.price}</td>
-            <td>${tour.destCountry}</td>
-            <td>${tour.startDay}</td>
-            <td>${tour.endDay}</td>
-            <td>${tour.food}</td>
-            <td>${tour.hot}</td>
-            <td>${tour.tourType}</td>
-        </tr>
+        <form method="post" action="<c:url value="/tours/buytour"/>">
+            <input type="hidden" name="idTour" value="${tour.idTour}">
+            <input type="hidden" name="price" value="${tour.price}">
+            <tr>
+                <td>${tour.hotelClass}</td>
+                <td>${tour.price}</td>
+                <td>${tour.destCountry}</td>
+                <td>${tour.startDay}</td>
+                <td>${tour.endDay}</td>
+                <td>${tour.food}</td>
+                <td>${tour.hot}</td>
+                <td>${tour.tourType}</td>
+                <td>
+                    <button class="myButtonRed" type="submit">Buy!</button>
+                </td>
+            </tr>
+        </form>
     </c:forEach>
 </table>

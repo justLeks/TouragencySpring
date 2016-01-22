@@ -34,7 +34,7 @@
                 <td>${tour.hot}</td>
                 <td>${tour.tourType}</td>
                 <td>
-                    <button type="submit">Buy!</button>
+                    <button class="myButtonRed" type="submit">Buy!</button>
                 </td>
             </tr>
         </form>

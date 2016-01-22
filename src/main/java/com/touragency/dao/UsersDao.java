@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,11 +19,15 @@ public class UsersDao {
     @Autowired
     private SessionFactory sessionFactory;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     public Session currentSession() {
         return sessionFactory.getCurrentSession();
     }
 
     public void add(User user) {
+        user.setEncodedPassword(passwordEncoder.encode(user.getPassword()));
         currentSession().saveOrUpdate(user);
     }
 

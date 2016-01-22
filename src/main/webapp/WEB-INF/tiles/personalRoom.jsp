@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<table class="flat-table flat-table-2" align="center">
+<table class="flat-table flat-table-3" align="center">
     <tr>
         <td>Hotel</td>
         <td>Price</td>
@@ -33,8 +33,25 @@
             <td>${info.hot}</td>
             <td>${info.tourType}</td>
             <td>${info.date}</td>
-            <td>${info.confirmed}</td>
-            <td>${info.paid}</td>
+            <c:choose>
+                <c:when test="${info.confirmed == false}">
+                    <td>Waiting for confirmation</td>
+                    <td>Not confirmed yet</td>
+                </c:when>
+                <c:otherwise>
+                    <td>Confirmed!</td>
+                    <c:choose>
+                        <c:when test="${info.paid == false}">
+                            <td>
+                                <button class="myButtonGrey" type="submit">Pay!</button>
+                            </td>
+                        </c:when>
+                        <c:otherwise>
+                            <td>Paid!</td>
+                        </c:otherwise>
+                    </c:choose>
+                </c:otherwise>
+            </c:choose>
         </tr>
     </c:forEach>
 </table>

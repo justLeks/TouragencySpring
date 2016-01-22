@@ -33,40 +33,6 @@ public class HomeController {
         return "home";
     }
 
-    @RequestMapping("/tours/allavaliabletours")
-    public String showAllTours(Model model) {
-        List<Tour> tours = toursDao.findAll();
-        model.addAttribute("tours", tours);
-        return "allAvailableTours";
-    }
-
-    @RequestMapping("/tours/shoppingtours")
-    public String showShoppingTours(Model model) {
-        List<Tour> tours = toursDao.findByTourType("Shopping");
-        model.addAttribute("shoppingTours", tours);
-        return "shoppingTours";
-    }
-
-    @RequestMapping("/tours/excursiontours")
-    public String showExcursionTours(Model model) {
-        List<Tour> tours = toursDao.findByTourType("Excursion");
-        model.addAttribute("excursionTours", tours);
-        return "excursionTours";
-    }
-
-    @RequestMapping("/tours/vacationtours")
-    public String showVacationTours(Model model) {
-        List<Tour> tours = toursDao.findByTourType("Vacation");
-        model.addAttribute("vacationTours", tours);
-        return "vacationTours";
-    }
-
-    @RequestMapping("/dashboard/addtour")
-    public String showAddTour(Model model) {
-        model.addAttribute("tour", new Tour());
-        return "addTour";
-    }
-
     @RequestMapping("/dashboard")
     public String showDashboard(Model model, Principal principal) {
         String email = principal.getName();

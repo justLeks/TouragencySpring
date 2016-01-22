@@ -12,3 +12,5 @@
 <a class="font" href="<c:url value="/dashboard/addtour"/>">Add Tour</a>
 <br/>
 <a class="font" href="<c:url value="/dashboard/userslist"/>">List of current users</a>
+<br/>
+<a class="font" href="<c:url value="/dashboard/currentorders"/>">List of current orders</a>

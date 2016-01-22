@@ -10,15 +10,15 @@ public class Order {
 
     @Id
     private int idOrder;
+
     private int idTour;
-    private int idUSer;
+    private int finalPrice;
+    private boolean confirmed;
+    private boolean paid;
+    private String email;
+    private String date;
 
     public Order() {
-    }
-
-    public Order(int idTour, int idUSer) {
-        this.idTour = idTour;
-        this.idUSer = idUSer;
     }
 
     public int getIdOrder() {
@@ -37,12 +37,44 @@ public class Order {
         this.idTour = idTour;
     }
 
-    public int getIdUSer() {
-        return idUSer;
+    public int getFinalPrice() {
+        return finalPrice;
     }
 
-    public void setIdUSer(int idUSer) {
-        this.idUSer = idUSer;
+    public void setFinalPrice(int finalPrice) {
+        this.finalPrice = finalPrice;
+    }
+
+    public boolean isConfirmed() {
+        return confirmed;
+    }
+
+    public void setConfirmed(boolean confirmed) {
+        this.confirmed = confirmed;
+    }
+
+    public boolean isPaid() {
+        return paid;
+    }
+
+    public void setPaid(boolean paid) {
+        this.paid = paid;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     @Override
@@ -53,14 +85,22 @@ public class Order {
         Order order = (Order) o;
 
         if (idTour != order.idTour) return false;
-        return idUSer == order.idUSer;
+        if (finalPrice != order.finalPrice) return false;
+        if (confirmed != order.confirmed) return false;
+        if (paid != order.paid) return false;
+        if (email != null ? !email.equals(order.email) : order.email != null) return false;
+        return date != null ? date.equals(order.date) : order.date == null;
 
     }
 
     @Override
     public int hashCode() {
         int result = idTour;
-        result = 31 * result + idUSer;
+        result = 31 * result + finalPrice;
+        result = 31 * result + (confirmed ? 1 : 0);
+        result = 31 * result + (paid ? 1 : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (date != null ? date.hashCode() : 0);
         return result;
     }
 
@@ -69,7 +109,11 @@ public class Order {
         return "Order{" +
                 "idOrder=" + idOrder +
                 ", idTour=" + idTour +
-                ", idUSer=" + idUSer +
+                ", finalPrice=" + finalPrice +
+                ", confirmed=" + confirmed +
+                ", paid=" + paid +
+                ", email='" + email + '\'' +
+                ", date='" + date + '\'' +
                 '}';
     }
 }

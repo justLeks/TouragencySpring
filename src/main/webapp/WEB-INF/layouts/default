@@ -47,7 +47,7 @@
         <put-attribute name="body" value="/WEB-INF/tiles/usersList.jsp"/>
     </definition>
     <definition name="userBlocked" extends="touragency.base">
-        <put-attribute name="title" value="List of Users"/>
+        <put-attribute name="title" value="User Blocked"/>
         <put-attribute name="body" value="/WEB-INF/tiles/userBlocked.jsp"/>
     </definition>
     <definition name="shoppingTours" extends="touragency.base">
@@ -63,7 +63,15 @@
         <put-attribute name="body" value="/WEB-INF/tiles/excursionTours.jsp"/>
     </definition>
     <definition name="dashboard" extends="touragency.base">
-        <put-attribute name="title" value="List of Excursion Tours"/>
+        <put-attribute name="title" value="Dashboard"/>
         <put-attribute name="body" value="/WEB-INF/tiles/dashboard.jsp"/>
+    </definition>
+    <definition name="tourOrdered" extends="touragency.base">
+        <put-attribute name="title" value="Tour Ordered"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/tourOrdered.jsp"/>
+    </definition>
+    <definition name="personalRoom" extends="touragency.base">
+        <put-attribute name="title" value="Tour Ordered"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/personalRoom.jsp"/>
     </definition>
 </tiles-definitions>

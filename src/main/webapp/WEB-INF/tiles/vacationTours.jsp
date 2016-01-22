@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<table class="flat-table flat-table-2">
+<table class="flat-table flat-table-2" align="center">
     <tr>
         <td>Hotel</td>
         <td>Price</td>

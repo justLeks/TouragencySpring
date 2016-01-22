@@ -6,8 +6,6 @@ div.footer {
 }
 
 div.body {
-    width: 900px;
-    margin: 0 auto;
     position: relative;
     text-align: center;
 }
@@ -40,6 +38,7 @@ a.login {
 }
 
 .flat-table {
+    text-align: center;
     margin-bottom: 20px;
     border-collapse:collapse;
     font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -84,7 +83,7 @@ a.login {
     background: #f06060;
 }
 .flat-table-3 {
-    background: #52be7f;
+    background: с;
 }
 .flat-table-3 tr:hover {
     background: rgba(0,0,0,0.1);

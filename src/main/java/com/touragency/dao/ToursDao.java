@@ -37,4 +37,10 @@ public class ToursDao {
         criteria.add(Restrictions.eq("tourType", tourType));
         return criteria.list();
     }
+
+    public Tour findByTourId(int idTour) {
+        Criteria criteria = currentSession().createCriteria(Tour.class);
+        criteria.add(Restrictions.eq("idTour", idTour));
+        return (Tour) criteria.uniqueResult();
+    }
 }

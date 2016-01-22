@@ -11,6 +11,12 @@
 
 <a class="homepage" href=<c:url value="/"/>>Spring Touragency</a>
 
+<%--<sec:authorize access="isAuthenticated()" var="loggedIn"/>--%>
+
+<%--<c:if test="${loggedIn}">--%>
+    <%--<sec:authentication property="principal.username"/>--%>
+<%--</c:if>--%>
+
 <sec:authorize  access="isAuthenticated()">
     <a class="login" href="<c:url value="/logout"/>">Log Out</a>
 </sec:authorize>

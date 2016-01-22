@@ -8,13 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<table>
+<table class="flat-table flat-table-1" align="center">
     <tr>
         <td>Name</td>
         <td>Email</td>
         <td>Password</td>
         <td>Authority</td>
         <td>Enabled</td>
+        <td></td>
     </tr>
     <c:forEach items="${users}" var="user">
         <form method="post" action="<c:url value="/dashboard/userblocked"/>">

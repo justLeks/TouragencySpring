@@ -6,8 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <h3>Create a New Account</h3>
+<h5 class="error"><c:out value="${userExists}"/></h5>
 <form:form method="post" action="${pageContext.request.contextPath}/createuser" commandName="user">
     <table align="center">
         <tr>

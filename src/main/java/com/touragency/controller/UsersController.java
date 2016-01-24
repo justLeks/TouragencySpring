@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 
@@ -23,10 +24,16 @@ public class UsersController {
     }
 
     @RequestMapping("/createuser")
-    public String createUser(@Valid User user, BindingResult result, Model model) {
+    public String createUser(@Valid User user, BindingResult result, Model model, @RequestParam(value = "email") String email) {
         if (result.hasErrors()) {
             return "signUp";
         }
+
+        if (usersDao.findByEmail(email) != null) {
+            model.addAttribute("userExists", "User with this email already exists");
+            return "signUp";
+        }
+
         user.setEnabled(true);
         user.setAuthority("ROLE_USER");
         usersDao.add(user);

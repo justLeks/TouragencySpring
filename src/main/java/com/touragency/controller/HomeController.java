@@ -1,6 +1,5 @@
 package com.touragency.controller;
 
-import com.touragency.dao.OrdersDao;
 import com.touragency.dao.UsersDao;
 import com.touragency.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +14,6 @@ public class HomeController {
 
     @Autowired
     private UsersDao usersDao;
-
-    @Autowired
-    private OrdersDao ordersDao;
 
     @RequestMapping("/")
     public String showHomepage() {

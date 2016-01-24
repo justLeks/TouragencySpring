@@ -27,10 +27,21 @@ public class OrdersDao {
     }
 
     @SuppressWarnings("unchecked")
+    public List<Order> findAll() {
+        return currentSession().createQuery("from Order").list();
+    }
+
+    @SuppressWarnings("unchecked")
     public List<Order> findByEmail(String email) {
         Criteria criteria = currentSession().createCriteria(Order.class);
         criteria.add(Restrictions.eq("email", email));
         return criteria.list();
+    }
+
+    public Order findById(int idTour) {
+        Criteria criteria = currentSession().createCriteria(Order.class);
+        criteria.add(Restrictions.idEq(idTour));
+        return (Order) criteria.uniqueResult();
     }
 
     public void confirm(Order order) {

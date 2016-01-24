@@ -82,4 +82,12 @@
         <put-attribute name="title" value="Ordered Tours"/>
         <put-attribute name="body" value="/WEB-INF/tiles/orderedTours.jsp"/>
     </definition>
+    <definition name="orderConfirmed" extends="touragency.base">
+        <put-attribute name="title" value="Order Confirmed"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/orderConfirmed.jsp"/>
+    </definition>
+    <definition name="orderPaid" extends="touragency.base">
+        <put-attribute name="title" value="Order Confirmed"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/orderPaid.jsp"/>
+    </definition>
 </tiles-definitions>

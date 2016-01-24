@@ -7,16 +7,31 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<h3>Login with Username and Password</h3>
+<h3>Login with Email and Password</h3>
 <form name='f' action='${pageContext.request.contextPath}/login' method='POST'>
-    <table>
+    <table align="center">
         <tr>
-            <td>User:</td>
-            <td><input type='text' name='username' value=''></td>
+            <td>Email:</td>
+            <c:choose>
+                <c:when test="${newUser.email != null}">
+                    <td><input type='text' name='username' value='${newUser.email}'></td>
+                </c:when>
+                <c:otherwise>
+                    <td><input type='text' name='username' value=''></td>
+                </c:otherwise>
+            </c:choose>
         </tr>
         <tr>
             <td>Password:</td>
-            <td><input type='password' name='password'/></td>
+            <c:choose>
+                <c:when test="${newUser.password != null}">
+                    <td><input type='password' name='password' value="${newUser.password}"/></td>
+                </c:when>
+                <c:otherwise>
+                    <td><input type='password' name='password'/></td>
+                </c:otherwise>
+            </c:choose>
+
         </tr>
         <tr>
             <td></td>

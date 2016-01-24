@@ -7,8 +7,9 @@
 --%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
+<h3>Create a New Account</h3>
 <form:form method="post" action="${pageContext.request.contextPath}/createuser" commandName="user">
-    <table>
+    <table align="center">
         <tr>
             <td>Name:</td>
             <td>

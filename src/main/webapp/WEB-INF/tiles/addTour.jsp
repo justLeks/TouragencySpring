@@ -7,9 +7,10 @@
 --%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
+<h3>Fill the tour's parameters</h3>
 <form:form method="post" action="${pageContext.request.contextPath}/dashboard/createtour" commandName="tour">
     <form:input path="idTour" type="hidden" name="idTour"/>
-    <table>
+    <table align="center">
         <tr>
             <td>Price:</td>
             <td>

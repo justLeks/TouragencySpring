@@ -2,6 +2,8 @@ package com.touragency.model;
 
 public class Info {
 
+    private int idOrder;
+    private String username;
     private int finalPrice;
     private boolean confirmed;
     private boolean paid;
@@ -13,6 +15,34 @@ public class Info {
     private int hotelClass;
     private String food;
     private String tourType;
+
+    public Info(int idOrder,
+                String username,
+                int finalPrice,
+                boolean confirmed,
+                boolean paid,
+                String date,
+                String destCountry,
+                String startDay,
+                String endDay,
+                boolean hot,
+                int hotelClass,
+                String food,
+                String tourType) {
+        this.idOrder = idOrder;
+        this.username = username;
+        this.finalPrice = finalPrice;
+        this.confirmed = confirmed;
+        this.paid = paid;
+        this.date = date;
+        this.destCountry = destCountry;
+        this.startDay = startDay;
+        this.endDay = endDay;
+        this.hot = hot;
+        this.hotelClass = hotelClass;
+        this.food = food;
+        this.tourType = tourType;
+    }
 
     public Info(int finalPrice,
                 boolean confirmed,
@@ -36,6 +66,22 @@ public class Info {
         this.hotelClass = hotelClass;
         this.food = food;
         this.tourType = tourType;
+    }
+
+    public int getIdOrder() {
+        return idOrder;
+    }
+
+    public void setIdOrder(int idOrder) {
+        this.idOrder = idOrder;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public int getFinalPrice() {
